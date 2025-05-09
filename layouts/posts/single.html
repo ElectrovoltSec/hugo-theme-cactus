@@ -44,7 +44,7 @@
             <i class="fas fa-archive"></i>
             {{ range $index, $value := .Params.categories }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="category-link" href="{{ " /blog/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value
+            <a class="category-link" href="{{ "/blog/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value
               }}</a>
             {{ end }}
           </div>
@@ -54,7 +54,7 @@
             <i class="fas fa-tag"></i>
             {{ range $index, $value := .Params.tags }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="tag-link" href="{{ " /blog/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
+            <a class="tag-link" href="{{ "/blog/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
             {{ end }}
           </div>
           {{ end }}
