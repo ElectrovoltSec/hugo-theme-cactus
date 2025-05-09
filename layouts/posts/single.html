@@ -30,6 +30,11 @@
             {{ if (and .Site.Params.show_updated (ne .Lastmod .Date)) }}
             (Updated: <time datetime="{{ .Lastmod }}" itemprop="dateModified">{{ .Lastmod.Format $dataFormat }}</time>)
             {{ end }}
+          {{ with .Params.author }}
+            <span class="author-plain" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">by {{ . }}</span>
+            </span>
+          {{ end }}
           </div>
           {{ $showReadTime := .Site.Params.showReadTime | default false }}
           {{if $showReadTime}}
