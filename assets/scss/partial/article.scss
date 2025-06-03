@@ -70,6 +70,11 @@ article {
       color: $color-quote;
       quotes: "\201C" "\201D" "\2018" "\2019";
       font-weight: bold;
+      background-color: #fff6f7;
+      quotes: "\201C" "\201D" "\2018" "\2019";
+      border-radius: .4em;
+      border-left: .3em solid #fe6c6f;
+      font-weight: bold;
 
       p {
         margin: 0;
