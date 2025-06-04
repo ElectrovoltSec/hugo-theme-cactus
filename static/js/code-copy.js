@@ -25,7 +25,7 @@
   .forEach((codeNode) => {
     const copyBtn = createCopyButton(codeNode);
     const preNode = codeNode.parentNode
-    codeNode.parentNode.insertBefore(copyBtn, codeNode)
+    preNode.parentNode.insertBefore(copyBtn, preNode)
   })
 
   document.querySelectorAll('.highlight table > tbody > tr > td:first-child .code-copy-btn')
